@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --font-family: 'Manrope', sans-serif;
+    --main-BG: var(--very-light-gray);
+    --card-BG: #fff;
+    --main-CR: var(--very-dark-blue);
+    --p-CR: var(--grayish-blue);
+}
+*, :after, :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--main-CR);
+    background-color: var(--main-BG);
+    text-align: center;
+    min-height: 100vh;
+    padding: 10vh 0;
+}
+h1.thin {
+    font-weight: 200;
+}
+h1 {
+    font-size: 1.58em;
+}
+p {
+    color: var(--p-CR);
+    margin: 18px 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+}
+.header {
+    width: 100%;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 0;
+    flex-direction: column;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    background: var(--card-BG);
+    text-align: start;
+    padding: 1.66667rem;
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 10px;
+    border-top: 5px solid;
+    box-shadow: 0 15px 15px #99999947;
+}
+.card:first-of-type {
+    border-top-color: var(--cyan);
+}
+.center-cards .card:first-of-type {
+    border-top-color: var(--red);
+    margin: 1rem 0rem 2rem;
+}
+.center-cards .card:last-of-type {
+    border-top-color: var(--orange);
+}
+.card:last-of-type {
+    border-top-color: var(--blue);
+}
+.card p {
+    margin: .66667rem 0 2.66667rem;
+    line-height: 1.8;
+}
+img {
+    width: fit-content;
+    align-self: flex-end;
+}
+@media (min-width: 1080px) {
+    .container {
+        padding: 0px;
+    }
+    .header {
+    width: 35em;
+    }
+    .cards {
+        flex-direction: row;
+    }
+    .card {
+        padding: 2rem;
+        margin: 1rem;
+        width: 27em;
+    }
+    .center-cards .card:first-of-type {
+        margin: 1rem 1rem 2rem;
+    }
+    .card p {
+        line-height: 1.5;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
